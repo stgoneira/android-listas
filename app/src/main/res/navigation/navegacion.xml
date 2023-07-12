@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion"
-    app:startDestination="@id/fragmentoListView2">
+    app:startDestination="@id/fragmentoRecyclerView">
 
     <fragment
         android:id="@+id/fragmentoInicio"
@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_fragmentoInicio_to_fragmentoListView2"
             app:destination="@id/fragmentoListView2" />
+        <action
+            android:id="@+id/action_fragmentoInicio_to_fragmentoRecyclerView"
+            app:destination="@id/fragmentoRecyclerView" />
     </fragment>
     <fragment
         android:id="@+id/fragmentoListView"
@@ -27,4 +30,9 @@
         android:name="cl.stgoneira.learning.android.listas.FragmentoListView2"
         android:label="fragmento_list_view2"
         tools:layout="@layout/fragmento_list_view2" />
+    <fragment
+        android:id="@+id/fragmentoRecyclerView"
+        android:name="cl.stgoneira.learning.android.listas.FragmentoRecyclerView"
+        android:label="fragmento_recycler_view"
+        tools:layout="@layout/fragmento_recycler_view" />
 </navigation>
