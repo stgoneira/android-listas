@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navegacion"
-    app:startDestination="@id/fragmentoRecyclerView">
+    app:startDestination="@id/fragmentoComposeLazyList">
 
     <fragment
         android:id="@+id/fragmentoInicio"
@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_fragmentoInicio_to_fragmentoRecyclerView"
             app:destination="@id/fragmentoRecyclerView" />
+        <action
+            android:id="@+id/action_fragmentoInicio_to_fragmentoComposeLazyList"
+            app:destination="@id/fragmentoComposeLazyList" />
     </fragment>
     <fragment
         android:id="@+id/fragmentoListView"
@@ -35,4 +38,9 @@
         android:name="cl.stgoneira.learning.android.listas.FragmentoRecyclerView"
         android:label="fragmento_recycler_view"
         tools:layout="@layout/fragmento_recycler_view" />
+    <fragment
+        android:id="@+id/fragmentoComposeLazyList"
+        android:name="cl.stgoneira.learning.android.listas.FragmentoComposeLazyList"
+        android:label="fragmento_compose_lazy_list"
+        tools:layout="@layout/fragmento_compose_lazy_list" />
 </navigation>
