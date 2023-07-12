@@ -41,10 +41,22 @@
     <fragment
         android:id="@+id/fragmentoComposeLazyList"
         android:name="cl.stgoneira.learning.android.listas.FragmentoComposeLazyList"
-        android:label="fragmento_compose_lazy_list"
-        tools:layout="@layout/fragmento_compose_lazy_list" >
+        android:label="fragmento_compose_lazy_list">
         <action
             android:id="@+id/action_fragmentoComposeLazyList_to_fragmentoInicio"
             app:destination="@id/fragmentoInicio" />
+        <action
+            android:id="@+id/action_fragmentoComposeLazyList_to_fragmentoDetalleComuna"
+            app:destination="@id/fragmentoDetalleComuna" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentoDetalleComuna"
+        android:name="cl.stgoneira.learning.android.listas.FragmentoDetalleComuna"
+        android:label="fragmento_detalle_comuna"
+        tools:layout="@layout/fragmento_detalle_comuna" >
+        <argument
+            android:name="comuna"
+            app:argType="string"
+            android:defaultValue="" />
     </fragment>
 </navigation>

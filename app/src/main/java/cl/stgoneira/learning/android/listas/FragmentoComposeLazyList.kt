@@ -31,8 +31,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.navigation.compose.rememberNavController
 import androidx.navigation.findNavController
 
 class FragmentoComposeLazyList : Fragment() {
@@ -82,7 +82,8 @@ fun ListaComunas(comunas: List<Comuna>) {
                         Toast
                             .makeText(contexto, "Comuna: ${it.comuna}", Toast.LENGTH_LONG)
                             .show()
-                        navController.navigate(R.id.action_fragmentoComposeLazyList_to_fragmentoInicio)
+                        val bundle = bundleOf("comuna" to it.comuna)
+                        navController.navigate(R.id.action_fragmentoComposeLazyList_to_fragmentoDetalleComuna, bundle)
                     }
             ) {
                 Image(
