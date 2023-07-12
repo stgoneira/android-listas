@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -20,6 +22,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
@@ -28,6 +32,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.findNavController
 
 class FragmentoComposeLazyList : Fragment() {
 
@@ -57,7 +63,10 @@ class FragmentoComposeLazyList : Fragment() {
 }
 
 @Composable
-fun ListaComunas(comunas: List<Comuna>) {    
+fun ListaComunas(comunas: List<Comuna>) {
+    val contexto        = LocalContext.current
+    val navController   = LocalView.current.findNavController()
+
     LazyColumn {
         items(comunas) {
             Row(
@@ -69,6 +78,12 @@ fun ListaComunas(comunas: List<Comuna>) {
                         color = Color.LightGray
                     )
                     .padding(all = 10.dp)
+                    .clickable {
+                        Toast
+                            .makeText(contexto, "Comuna: ${it.comuna}", Toast.LENGTH_LONG)
+                            .show()
+                        navController.navigate(R.id.action_fragmentoComposeLazyList_to_fragmentoInicio)
+                    }
             ) {
                 Image(
                     painter = painterResource(R.drawable.flag_of_chile),

@@ -42,5 +42,9 @@
         android:id="@+id/fragmentoComposeLazyList"
         android:name="cl.stgoneira.learning.android.listas.FragmentoComposeLazyList"
         android:label="fragmento_compose_lazy_list"
-        tools:layout="@layout/fragmento_compose_lazy_list" />
+        tools:layout="@layout/fragmento_compose_lazy_list" >
+        <action
+            android:id="@+id/action_fragmentoComposeLazyList_to_fragmentoInicio"
+            app:destination="@id/fragmentoInicio" />
+    </fragment>
 </navigation>
