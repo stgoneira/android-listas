@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="comunas2">
+        <item>Papudo|Región de Valparaíso</item>
+        <item>Limache|Región de Valparaíso</item>
+        <item>Quilpúe|Región de Valparaíso</item>
+        <item>Villa Alemana|Región de Valparaíso</item>
+        <item>Casablanca|Región de Valparaíso</item>
+        <item>El Quisco|Región de Valparaíso</item>
+        <item>Maipú|Región Metropolitana</item>
+        <item>Pudahuel|Región Metropolitana</item>
+        <item>Cerro Navia|Región Metropolitana</item>
+        <item>Lo Prado|Región Metropolitana</item>
+        <item>Renca|Región Metropolitana</item>
+        <item>Quinta Normal|Región Metropolitana</item>
+        <item>Estación Central|Región Metropolitana</item>
+        <item>Pedro Aguirre Cerda|Región Metropolitana</item>
+        <item>La Cisterna|Región Metropolitana</item>
+        <item>La Florida|Región Metropolitana</item>
+        <item>Puente Alto|Región Metropolitana</item>
+        <item>Conchalí|Región Metropolitana</item>
+        <item>Recoleta|Región Metropolitana</item>
+    </array>
+</resources>

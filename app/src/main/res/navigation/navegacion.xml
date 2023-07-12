@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/fragmentoListView2">
+
+    <fragment
+        android:id="@+id/fragmentoInicio"
+        android:name="cl.stgoneira.learning.android.listas.FragmentoInicio"
+        android:label="fragmento_inicio"
+        tools:layout="@layout/fragmento_inicio" >
+        <action
+            android:id="@+id/action_fragmentoInicio_to_fragmentoListView"
+            app:destination="@id/fragmentoListView" />
+        <action
+            android:id="@+id/action_fragmentoInicio_to_fragmentoListView2"
+            app:destination="@id/fragmentoListView2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentoListView"
+        android:name="cl.stgoneira.learning.android.listas.FragmentoListView"
+        android:label="fragmento_list_view"
+        tools:layout="@layout/fragmento_list_view" />
+    <fragment
+        android:id="@+id/fragmentoListView2"
+        android:name="cl.stgoneira.learning.android.listas.FragmentoListView2"
+        android:label="fragmento_list_view2"
+        tools:layout="@layout/fragmento_list_view2" />
+</navigation>

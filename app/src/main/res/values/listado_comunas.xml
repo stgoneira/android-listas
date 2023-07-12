@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="comunas">
+        <item>Maipú</item>
+        <item>Pudahuel</item>
+        <item>Cerro Navia</item>
+        <item>Lo Prado</item>
+        <item>Renca</item>
+        <item>Quinta Normal</item>
+        <item>Estación Central</item>
+        <item>Pedro Aguirre Cerda</item>
+        <item>La Cisterna</item>
+        <item>La Florida</item>
+        <item>Puente Alto</item>
+        <item>Conchalí</item>
+        <item>Recoleta</item>
+    </array>
+</resources>
